@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const Sim = a => a.content == 'Sim'
 const Não = a => a.content == 'Não'
 exports.run = (bot, message, args) => {
-    if (message.author.id !== "134292889177030657") return;
+    if (message.author.id !== "SEU ID AQUI") return;
             let embed = new Discord.RichEmbed()
         .setAuthor(message.author.username)
         .setTimestamp()
