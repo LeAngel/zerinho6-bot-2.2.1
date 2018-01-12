@@ -1,4 +1,4 @@
 exports.run = function() {
-    console.log('Oi zerinho...');
-    this.user.setGame('ze.help for help');
+    console.log('Estou on-line');
+    this.user.setGame('Bote oq deve aparecer no jogando aqui');
 };
