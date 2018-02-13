@@ -1,5 +1,6 @@
 const Discord = require("discord.js")
 exports.run = (bot, message, args) => {
+  if(message.channel.permissionsFor(bot.user.id).has('EMBED_LINKS')) {
 let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setTitle("Creditos")
@@ -8,4 +9,7 @@ let embed = new Discord.RichEmbed()
   .setColor(message.member.highestRole.color)
   .setThumbnail("https://media.giphy.com/media/osjgQPWRx3cac/giphy.gif")
         message.channel.send({embed});
+      } else {
+        message.channel.send("Por favor, me dê a permissão EMBED_LINKS para esse e outros comandos funcionarem.")
+      }
 }
