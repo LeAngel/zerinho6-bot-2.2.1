@@ -26,6 +26,7 @@
  "lolwallpaper": {"description": "Manda o wallpaper do campeão pedido", "usage": "ze.lolwallpaper jax ou zerinh.lolwallpaper jarvaniv"},
  "github": {"description": "Posta a GitHub do bot (Necessario a permissão de enviar links)", "usage": "ze.github ou zerinh.github"},
  "code": {"description": "Envia o codigo do comando pedido", "usage": "ze.code avatar ou zerinh.code avatar"},
+ "x1": {"description": "COMEÇA UM DUELO MORTAL DO X1 NO QUAL O RESULTADO É PURA SORTE", "usage": "ze.x1 YASUO | KAYN"},
  "changelog": {"description": "Mostra as notas de atualização da ultima mudança no zerinho6 bot", "usage": "ze.changelog ou zerinh.changelog"},
  "jogar": {"description": "Cria um bloco no qual você pode botar informações para ver se alguém quer jogar com você", "usage": "ze.jogar 1 | League of Legends | 3 minutos | Procuro top laner"},
  "horario": {"description": "Mostra o horario de brasilia para você saber se sua hora esta correta :^)", "usage": "ze.horario ou zerinh.horario"},
