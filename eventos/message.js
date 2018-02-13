@@ -44,6 +44,22 @@ exports.run = function(message) {
 			}
 	
 	}
+	  if (message.content.toLowerCase() == "ze.horario") {
+         if(!message.channel.permissionsFor(this.user.id).has('EMBED_LINKS')) return embedperm(message)
+     var hora_atual = parseInt(timestamp('HH'));
+    if (hora_atual >= 0 && hora_atual <= 24) {
+        var fuso_horario = -2;
+        var hora_no_fuso_autal = (hora_atual + 24 + fuso_horario)%24;
+        
+        let embed = new Discord.RichEmbed()
+        .setAuthor(message.author.username, message.author.avatarURL)
+        .setDescription("Hora: " + hora_no_fuso_autal + ":" + timestamp('mm:ss'))
+        if (message.member.highestRole.color !== undefined) {
+               embed.setColor(message.member.highestRole.color)
+        }
+        message.channel.send(embed)
+    }
+}
 	  
 	if ((includes('qual a') || includes('qual o')) && includes('prefix') && includes('zerinho')) {
 		message.reply(config.prefix[0]);
