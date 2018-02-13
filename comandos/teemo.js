@@ -1,5 +1,6 @@
 const Discord = require("discord.js")
 exports.run = (bot, message, args) => {
+    if(!message.channel.permissionsFor(bot.user.id).has('EMBED_LINKS')) return message.channel.send("Por favor, me dê a permissão EMBED_LINKS para esse e outros comandos funcionarem.");
     let parts = message.content.split(' ');
     let argsJunto = message.content.split(" ").slice(1).join(' ')
     if (argsJunto.length !== 0) {
@@ -9,7 +10,7 @@ exports.run = (bot, message, args) => {
         .setAuthor(message.author.username, message.author.avatarURL)
           .setTimestamp()
           .setURL("https://www.patreon.com/Yordles")
-          .addField("Aperte no nome do Invocador para abrir o link.", '.')
+          .addField("Aperte no nome do Invocador", ' para abrir o link.')
           .setThumbnail("https://cdn.discordapp.com/emojis/298229401399853056.png")
             .setDescription(`[**\n${argsJunto}**](https://teemo.gg/player/resume/br/${argsJunto}/)`);
             message.channel.send({embed});
