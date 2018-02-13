@@ -1,12 +1,7 @@
 const Discord = require("discord.js")
-var moment = require('moment');
-const fs = require("fs")
 const embed = new Discord.RichEmbed()
-.setColor(0x00AE86)
-const HelpEmbed = new Discord.RichEmbed()
-moment.locale('pt-BR');
-new Discord.RichEmbed();
 exports.run = (bot, message, args) => {
+	    if(!message.channel.permissionsFor(bot.user.id).has('EMBED_LINKS')) return message.channel.send("Por favor, me dê a permissão EMBED_LINKS para esse e outros comandos funcionarem.");
     let parts = message.content.split(' ');
     let argsJunto = message.content.split(" ").slice(1).join(' ')
     	   if (argsJunto.length !== 0) {
