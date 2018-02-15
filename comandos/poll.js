@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 var moment = require('moment');
 moment.locale('pt-BR');
 exports.run = (bot, message, args) => {
+	      if(!message.channel.permissionsFor(bot.user.id).has('EMBED_LINKS')) return message.channel.send("Por favor, me dê a permissão EMBED_LINKS para esse e outros comandos funcionarem.");
     let parts = message.content.split(' ');
     let argsJunto = message.content.split(" ").slice(1).join(' ')
     const pollcommand = new Discord.RichEmbed();
@@ -17,13 +18,9 @@ exports.run = (bot, message, args) => {
         pollcommand.setDescription(`${argsJunto}`);
         pollcommand.setTimestamp();
         if (parts.length > 1) {
-            if (message.channel.permissionsFor(message.guild.member(bot.user)).hasPermission('EMBED_LINKS')) {
                 message.channel.sendEmbed(pollcommand).then(message => {
                     message.react('👍').then(message.react('👎'))
                 })
-            } else {
-                message.channel.send(':x: | Eu não posso criar a votação, pois não tenho a permissão `EMBED_LINKS`...').then(message => {
-                            	setTimeout(() => {message.delete()}, 5000)
-                            })
+            
             }}
-}}
+}
