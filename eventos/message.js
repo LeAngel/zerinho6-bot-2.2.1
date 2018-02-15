@@ -1,4 +1,5 @@
-const fs = require("fs");
+/* global Set */
+const talkedRecently = new Set();const fs = require("fs");
 const config = require('../config.json');
 let database = JSON.parse(fs.readFileSync('./database/serversconfig.json', 'utf8'));
 const Discord = require('discord.js')
@@ -34,7 +35,12 @@ exports.run = function(message) {
 	}
 
 	if (message.prefix && args[0]) {
-
+if (talkedRecently.has(message.author.id)) return;
+talkedRecently.add(message.author.id);
+setTimeout(() => {
+ 
+  talkedRecently.delete(message.author.id);
+}, 2500);
 		let name = args[0].slice(message.prefix.length).toLowerCase();
 		let Comands = fs.readdirSync('./comandos').map((c) => c.replace(/.js/gi, '').toLowerCase());
 		let Command = Comands.includes(name) ? require(`../comandos/${name}.js`) : null;
