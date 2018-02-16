@@ -32,14 +32,14 @@ exports.run = (bot, message, args) => {
     HelpEmbed.addField('Comandos', '`' + Object.keys(comandos).join('` `') + '`\n\n**Prefixes:** ' + Prefixes + '\n\nPara ver mais sobre um comando, execute `ze.help (comando)`.\n**Exemplo:** `ze.help poll`')
     HelpEmbed.setFooter('Zerinho Bot criado por Zerinho6 e Smix.', ' https://i.imgur.com/4owShZN.png');
     if(message.channel.type === 'dm') {
-        message.channel.sendEmbed(HelpEmbed)
+        message.channel.send(HelpEmbed)
     } else {
         if(message.member.highestRole.color !== undefined) {
             HelpEmbed.setColor(message.member.highestRole.color)
             if(message.guild.member(bot.user).hasPermission('EMBED_LINKS')) {
-                message.channel.sendEmbed(HelpEmbed)
+                message.channel.send(HelpEmbed)
             } else {
-                message.author.sendEmbed(HelpEmbed);
+                message.author.send(HelpEmbed);
                 message.channel.send(':warning: | Eu não tenho a permissão `EMBED_LINKS` neste servidor. O resultado foi enviado por privado...');
             }
         }
@@ -51,12 +51,12 @@ exports.run = (bot, message, args) => {
         HelpEmbed.setTitle('ze.' + Object.keys(comandos)[Object.keys(comandos).findIndex(a => a === args[0])])
         HelpEmbed.setDescription(comandos[args[0]].description + '\n\n**Uso: **' + comandos[args[0]].usage)
         if(message.channel.type === 'dm') {
-        message.channel.sendEmbed(HelpEmbed)
+        message.channel.send(HelpEmbed)
     } else {
         if(message.member.highestRole.color !== undefined) {
             HelpEmbed.setColor(message.member.highestRole.color)
             if(message.guild.member(bot.user).hasPermission('EMBED_LINKS')) {
-                message.channel.sendEmbed(HelpEmbed)
+                message.channel.send(HelpEmbed)
             } else {
                 message.channel.send(':warning: | Eu não tenho a permissão `EMBED_LINKS` neste servidor. O resultado foi enviado por privado...');
             }
