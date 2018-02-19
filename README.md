@@ -5,17 +5,13 @@ Quer hostear o bot? Sem problemas! bom, vamos começar!
 
 1° Você vai ter que baixar um editor de texto diferente do editor de notas ou do Notepad, recomendo: [Visual Studio](https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjgi4ad1oLWAhUGOCYKHd9yALMQFggvMAA&url=https%3A%2F%2Fwww.visualstudio.com%2F&usg=AFQjCNFDWSFzkxHb9dM5XH4y7FO-1dtkgA)
 
-2° Crie uma pasta na sua Area de trabalho com qualquer nome, dentro dela bote tudo que esta [aqui](https://github.com/zerinho6/Zerinho6-Bot) agora nessa pasta segure Shift e clique com o botão direito do mouse em algum lugar vazio da pasta. Selecione "Abrir janela de comando aqui."
-
-Quando o CMD abrir, digite ``npm install --save discord.js``.
-
-Aguarde até que você possa digitar novamente no CMD, então digite ``npm install moment --save``.
-
-Aguarde denovo, e digite ``npm i google-translate-api``, aguarde, e feche o CMD.
-
-3° **Instale o Node.js**
+2° **Instale o Node.js**
 
 Para rodar o bot, você precisa ter o node.js. Baixe ele clicando [aqui](https://nodejs.org/en/download/), depois instale-o.
+
+3° Crie uma pasta na sua Area de trabalho com qualquer nome, dentro dela bote tudo que esta [aqui](https://github.com/zerinho6/Zerinho6-Bot) agora nessa pasta segure Shift e clique com o botão direito do mouse em algum lugar vazio da pasta. Selecione "Abrir janela de comando aqui."
+
+Quando o CMD abrir, digite ``npm install``, aguarde, e feche o CMD.
 
 4° **Configure o bot.**
 Você não vai poder hostear no mesmo usuário que o Zerinho6 Bot oficial, então você deverá criar um novo. Clique aqui e, quando a página carregar, clique em "New app". Coloque as informações do seu bot, de preferência as mesmas do Zerinho6 Bot original, e então clique em "Create app", depois clique em "Create bot user".
