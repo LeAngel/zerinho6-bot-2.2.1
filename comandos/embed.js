@@ -11,6 +11,6 @@ exports.run = (bot, message, args) => {
             embed.setDescription('' + `${argsJunto}`);
             message.channel.send({ embed });
         } else {
-            message.channel.send('A sintaxe do comando está incorreta. Sintaxe correta: `' + parts[0] + ' Sou legal!`')
+            message.channel.send('A sintaxe do comando está incorreta. Sintaxe correta: .i.' + parts[0] + ' Sou legal!`')
         }
         }
